@@ -1,0 +1,7 @@
+export { default as CoinInfo } from './CoinInfo'
+export { default as Cryptocurrencies } from './Cryptocurrencies'
+export { default as ExchangeInfo } from './ExchangeInfo'
+export { default as Home } from './Home'
+export { default as Exchanges } from './Exchanges'
+export { default as News } from './News'
+export { default as PageNotFound } from './PageNotFound'

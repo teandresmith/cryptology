@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 import {
   Col,
   Skeleton,
@@ -52,9 +52,10 @@ const CoinInfo = ({ match }) => {
     isLoading: cryptoNewsLoading,
   } = useGetSpecificCryptoNewsQuery(crypto?.data?.coin?.name)
 
-  const labels = cryptoHistory?.data?.history.map((timestamp) =>
-    moment(new Date(timestamp.timestamp)).format('l')
+  const labels = cryptoHistory?.data?.history.map((item) =>
+    moment.unix(item.timestamp).format('l')
   )
+
   const datasetData = cryptoHistory?.data?.history.map((price) => price.price)
   const timeframes = ['7d', '30d', '1y', '5y']
 
@@ -176,6 +177,7 @@ const CoinInfo = ({ match }) => {
                 </Row>
               ) : (
                 <>
+                  {labels ? console.log(labels) : console.log('no labels')}
                   <Row style={setStyles('lineGraphContainer')}>
                     <Col style={setStyles('lineGraph')}>
                       <Line
@@ -235,17 +237,17 @@ const CoinInfo = ({ match }) => {
                       />
                     </Col>
 
-                    <Col xs={12} sm={12}>
+                    {/* <Col xs={12} sm={12}>
                       <Statistic
                         title='Volume'
-                        value={millify(crypto?.data?.coin.volume)}
+                        value={millify(crypto?.data?.coin.24hVolume)}
                       />
-                    </Col>
+                    </Col> */}
 
                     <Col xs={12} sm={12}>
                       <Statistic
                         title='Circulating Supply'
-                        value={millify(crypto?.data?.coin.circulatingSupply)}
+                        value={millify(crypto?.data?.coin.supply.circulating)}
                       />
                     </Col>
                   </Row>

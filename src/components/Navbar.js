@@ -86,15 +86,6 @@ const Navbar = () => {
               </Link>
             </Menu.Item>
             <Menu.Item
-              key='Exchanges'
-              icon={<FundOutlined />}
-              style={setStyles('menuItem')}
-            >
-              <Link to='/exchanges' style={setStyles('menuLink')}>
-                Exchanges
-              </Link>
-            </Menu.Item>
-            <Menu.Item
               key='Cryptocurrencies'
               icon={<MoneyCollectOutlined />}
               style={setStyles('menuItem')}
@@ -159,15 +150,6 @@ const MobileNav = ({ setStyles }) => {
                   onClick={() => setOpen(false)}
                 >
                   <HomeOutlined /> Home
-                </Link>
-              </div>
-              <div className='mobileLinkContainer'>
-                <Link
-                  className='mobileLink'
-                  to='/exchanges'
-                  onClick={() => setOpen(false)}
-                >
-                  <FundOutlined /> Exchanges
                 </Link>
               </div>
               <div className='mobileLinkContainer'>

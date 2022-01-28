@@ -27,8 +27,8 @@ const App = () => {
             <Layout style={{ minHeight: '100vh' }} className='layoutContainer'>
               <Switch>
                 <Route exact path='/news' component={News} />
-                <Route exact path='/exchanges' component={Exchanges} />
-                <Route exact path='/exchanges/:id?' component={ExchangeInfo} />
+                {/* <Route exact path='/exchanges' component={Exchanges} />
+                <Route exact path='/exchanges/:id?' component={ExchangeInfo} /> */}
 
                 <Route
                   exact

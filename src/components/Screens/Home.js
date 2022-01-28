@@ -126,7 +126,7 @@ const Home = () => {
             </div>
             <CryptoCoin top10 />
           </div>
-          <div className='exchanges'>
+          {/* <div className='exchanges'>
             <div>
               <Typography.Title level={2} style={setStyles('top10Header')}>
                 <div>Current Top 5 Exchanges in the World</div>
@@ -139,7 +139,7 @@ const Home = () => {
             <div>
               <Exchange top5 />
             </div>
-          </div>
+          </div> */}
         </>
       )}
     </>

@@ -62,7 +62,7 @@ const CryptoCoin = ({ top10, searchFilter }) => {
           cryptoList &&
           cryptoList.map((coin) => (
             <Col key={coin.slug} xs={24} sm={12} lg={6}>
-              <Link to={`/cryptocurrencies/${coin.id}`}>
+              <Link to={`/cryptocurrencies/${coin.uuid}`}>
                 <Card
                   className='card'
                   title={`${coin.rank}. ${coin.name}`}

@@ -14,9 +14,9 @@ const Footer = () => {
                 Home
               </Typography.Text>
             </Link>
-            <Link to='/exchanges'>
+            {/* <Link to='/exchanges'>
               <Typography.Text strong>Exchanges</Typography.Text>
-            </Link>
+            </Link> */}
             <Link to='/cryptocurrencies'>
               <Typography.Text strong>Crypto</Typography.Text>
             </Link>
